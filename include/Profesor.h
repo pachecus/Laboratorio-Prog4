@@ -4,11 +4,9 @@
 #include "Usuario.h"
 #include "Idioma.h"
 #include "Curso.h"
-
 #include "DTUsuario.h"
 #include <iostream>
 #include <list>
-
 using namespace std;
 
 class DTProfesor;
@@ -29,7 +27,6 @@ class Profesor : public Usuario{
         //Getters
         string getInstituto();
         list <Idioma *> getIdiomasEspecializa();
-        //list <Curso *> getCursosCreados();
         //OtrasOperaciones
         DTUsuario* getDataUsuario();
         list<string> getIdiomas();

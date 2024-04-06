@@ -11,7 +11,6 @@ string DTIdioma::getNombre() const{
     return this->idioma;
 }
 
-
 ostream& operator<<(ostream& os,const DTIdioma& idioma) {
     os << "Idioma: " + idioma.getNombre() << endl;
     return os;

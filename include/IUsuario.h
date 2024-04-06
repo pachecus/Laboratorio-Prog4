@@ -12,15 +12,12 @@
 #include "Estudiante.h"
 #include "Profesor.h"
 #include "Usuario.h"
-//#include "DTEstadisticaCurso.h"
-
 using namespace std;
 
 class IUsuario {
     public: 
       IUsuario() {}; //Constructor
       virtual ~IUsuario(){}; //Destructor
-    
       virtual DTUsuario* consultarUsuario(string nickname) = 0;
       virtual list<DTEstadisticaCurso> mostrarPromediosCursosEstudiante(string nickname) = 0;
       virtual list<DTIdioma> listarIdiomasProfesor(string nickname) = 0;

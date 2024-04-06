@@ -1,7 +1,7 @@
 #ifndef DTIDIOMA
 #define DTIDIOMA
-#include <iostream>
 
+#include <iostream>
 using namespace std;
 
 class DTIdioma {
@@ -16,6 +16,5 @@ class DTIdioma {
 };
 
 ostream& operator<<(ostream& os, const DTIdioma& idioma);
-    
 
 #endif

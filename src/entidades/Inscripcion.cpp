@@ -115,7 +115,4 @@ DTInscripcion Inscripcion::getDataInscripcion(){
 
 Inscripcion::~Inscripcion() {
     this->estudiante->elimInscripcion(this);
-} 
-
-
-
+}

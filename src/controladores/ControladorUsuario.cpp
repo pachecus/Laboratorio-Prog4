@@ -3,7 +3,6 @@
 #include "../../include/ControladorCurso.h"
 #include <map>
 #include <set>
-
 #include <iostream>
 using namespace std;
 
@@ -51,7 +50,6 @@ list<DTIdioma> ControladorUsuario::listarIdiomasProfesor(string nickname){
   }
   return dtidiomasProfe;
 };
- 
 
 list<DTProfesor*> ControladorUsuario::listarProfesores(){
     list<DTProfesor*> profesoresDelSistema;
@@ -65,7 +63,6 @@ list<DTProfesor*> ControladorUsuario::listarProfesores(){
 
     return profesoresDelSistema;
 }
-
  
 list<DTEstudiante*>  ControladorUsuario::listarEstudiantes(){
     list<DTEstudiante*> res;
@@ -77,8 +74,6 @@ list<DTEstudiante*>  ControladorUsuario::listarEstudiantes(){
     return res;
 }
  
-
- 
 list<DTNotificacion> ControladorUsuario::listarNotificaciones(string nickname){
     Usuario * u;
     if(this->estudiantes.count(nickname) != 0){
@@ -88,38 +83,31 @@ list<DTNotificacion> ControladorUsuario::listarNotificaciones(string nickname){
     }
     return u->getNotificaciones();
 }
- 
 
 list<DTIdioma> ControladorUsuario::listarIdiomasNoSuscrito(string nickname){
     ControladorCurso* cc = ControladorCurso::getInstancia();
-    // factory* fac = factory::getInstancia();
     Usuario * u;
     if(this->estudiantes.count(nickname) != 0){
         u = this->estudiantes.find(nickname)->second;
     }else{
         u = this->profesores.find(nickname)->second;
     }
-    // ICurso* icurso = fac->getICurso();
     guardarUsuario(u);
     return cc->getIdiomasNoSuscrito(u);
 }
 
 list<DTIdioma> ControladorUsuario::listarIdiomasSuscrito(string nickname){
     ControladorCurso* cc = ControladorCurso::getInstancia();
-    // factory* fac = factory::getInstancia();
     Usuario * u;
     if(this->estudiantes.count(nickname) != 0){
         u = this->estudiantes.find(nickname)->second;
     }else{
         u = this->profesores.find(nickname)->second;
     }
-    // ICurso* icurso = fac->getICurso();
     guardarUsuario(u);
     return cc->getIdiomasSuscrito(u);
 }
 
-
- 
 bool ControladorUsuario::registrarEstudiante(DTEstudiante est){
     bool u;
     if (this->estudiantes.find(est.getNickname()) != this->estudiantes.end()) {
@@ -134,7 +122,6 @@ bool ControladorUsuario::registrarEstudiante(DTEstudiante est){
             u = false;
         }
     }
-
     if (u == false) {
         Estudiante* e = new Estudiante(est.getPaisDeResidencia(), est.getFechaDeNacimiento(), est.getNickname(), est.getContrasenia(), est.getNombre(), est.getDescripcion());
         this->estudiantes.insert({est.getNickname(), e});
@@ -143,7 +130,6 @@ bool ControladorUsuario::registrarEstudiante(DTEstudiante est){
         return false;
     }
 }
- 
  
 bool ControladorUsuario::registrarProfesor(DTProfesor prof){
     bool u;
@@ -159,7 +145,6 @@ bool ControladorUsuario::registrarProfesor(DTProfesor prof){
             u = false;
         }
     }
-
     if (u == false) {
         ControladorCurso* cc = ControladorCurso::getInstancia();
         map<string, Idioma*> idiomas = cc->getIdiomas();
@@ -188,44 +173,38 @@ void ControladorUsuario::eliminarNotificaciones(string nickname){
     u->vaciarNotificaciones();
 }
 
-
 void ControladorUsuario::suscribirseAIdioma(string idioma){
     Usuario * u = getUsuario();
     ControladorCurso * cc = ControladorCurso::getInstancia();
     cc->crearSuscripcionAIdioma(idioma, u);
 } 
 
-
 list<DTEstadisticaCurso> ControladorUsuario::mostrarPromediosCursosEstudiante(string nickname){
     Estudiante* e = this->estudiantes.find(nickname)->second;
     return e->getEstadisticaCurso();
 }
 
-  
 list<DTEstadisticaCurso> ControladorUsuario::mostrarPromediosCursosProfesor(string nickname){
     Profesor * p = this->profesores.find(nickname)->second;
     return p->getPromediosCursos();
 }
  
- 
 void ControladorUsuario::guardarUsuario(Usuario* usuario){
     this->u = usuario;
 }
 
- 
 void ControladorUsuario::guardarEstudiante(Estudiante* estudiante){
     this->est = estudiante; 
 }
-
 
 Usuario* ControladorUsuario::getUsuario(){
     return this->u;
 }
 
-
 Estudiante* ControladorUsuario::getEstudianteCurso(){
     return this->est;
 }
+
 list<DTCurso> ControladorUsuario::listarCursosNoAprobados(string nicknameEst) {
     map<string, Estudiante*> estudiantes = this->getEstudiantes();
     Estudiante* estudiante = estudiantes.find(nicknameEst)->second;
@@ -242,7 +221,6 @@ list<DTEjercicio> ControladorUsuario::listarEjerciciosNoAprobados(string nomCurs
     return ejerciciosNoAprobados;
 }
  
-
 DTUsuario* ControladorUsuario::consultarUsuario(string nickname) {
     map<string, Estudiante*> estudiantes = this->getEstudiantes();
     map<string, Profesor*> profesores = this->getProfesores();
@@ -288,5 +266,3 @@ void ControladorUsuario::liberarUsuario(){
 
     this->profesores.clear();
 }
-
-

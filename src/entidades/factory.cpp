@@ -32,5 +32,4 @@ IUsuario *factory::getIUsuario()
     return ControladorUsuario::getInstancia();
 };
 
-
 factory::~factory(){}; 

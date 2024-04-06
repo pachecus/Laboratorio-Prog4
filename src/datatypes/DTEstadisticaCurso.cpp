@@ -1,6 +1,5 @@
 #include "../../include/DTEstadisticaCurso.h"
 
-
 //constructores
 DTEstadisticaCurso::DTEstadisticaCurso(){
     this->promedio = 0;

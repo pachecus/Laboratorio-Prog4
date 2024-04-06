@@ -27,6 +27,8 @@
         "system_error": "cpp",
         "thread": "cpp",
         "tuple": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "xtree": "cpp",
+        "xstring": "cpp"
     }
 }

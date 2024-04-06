@@ -4,10 +4,8 @@
 #include <iostream>
 #include <set>
 #include <list>
-
 #include "DTInscripcion.h"
 #include "DTEjercicio.h"
-
 using namespace std;
 
 class Inscripcion;

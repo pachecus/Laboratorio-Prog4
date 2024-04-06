@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include "Ejercicio.h"
-//#include "Inscripcion.h"
 using namespace std;
 
 class EjercicioCompletar : public Ejercicio {
@@ -25,7 +24,5 @@ public:
     DTEjercicio getDataEjercicio();
     string getTipo();
 };
-
-
 
 #endif

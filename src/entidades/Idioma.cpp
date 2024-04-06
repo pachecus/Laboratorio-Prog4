@@ -1,7 +1,6 @@
 #include <iostream>
 #include "../../include/Idioma.h"
 #include "../../include/DTNotificacion.h"
-
 using namespace std;
 
 Idioma::Idioma()
@@ -65,4 +64,3 @@ bool Idioma::verificarSuscripcion(IObserver* u) {
 void Idioma::suscribirse(IObserver* o) {
     this->observers.push_back(o);
 }
-

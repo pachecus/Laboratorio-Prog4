@@ -11,7 +11,6 @@
 #include "DTEstadisticaCurso.h"
 #include "DTCurso.h"
 #include "DTEjercicio.h"
-
 using namespace std;
 
 //class Ejercicio;
@@ -48,7 +47,6 @@ class Inscripcion {
         DTCurso getDataCurso();
         DTEstadisticaCurso getPromedioCurso();
         bool buscarCurso(string nomCurso, list<DTEjercicio>&, Inscripcion*);
-        // DTLeccion getLeccionActual();
         int cantEjAprobados();
         void elimEjercicio(Ejercicio*); 
         DTInscripcion getDataInscripcion();

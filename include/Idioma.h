@@ -3,10 +3,8 @@
 
 #include <iostream>
 #include <list>
-
 #include "DTIdioma.h"
 #include "IObserver.h"
-
 using namespace std;
 
 class Curso;

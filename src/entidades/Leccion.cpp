@@ -112,6 +112,5 @@ Leccion::~Leccion(){
 	for(it = this->Ejercicios.begin(); it != this->Ejercicios.end(); it++){
 		delete (*it);
 	}
-	this->Ejercicios.clear();
-	//se borra la leccion
+	this->Ejercicios.clear(); //se borra la leccion
 }

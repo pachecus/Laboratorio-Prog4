@@ -6,7 +6,6 @@ Profesor::Profesor(string nickname, string contrasenia, string nombre, string de
     this->idiomasEspecializa = idiomas;
 } 
 
-
 string Profesor::getInstituto(){
     return this->instituto;
 }
@@ -43,8 +42,6 @@ DTProfesor* Profesor::getDataProfesor()
     }    
     DTProfesor *prof = new DTProfesor(this->getNickname(), this->getContrasenia(), this->getNombre(), this->getDescripcion(), this->getNotificaciones(), this->instituto, idiomas);
     return prof;
-
-
 }
 
 DTUsuario* Profesor::getDataUsuario(){

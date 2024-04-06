@@ -182,8 +182,6 @@ void Curso::verificarUltimaLeccion(int idLeccion){
         inscripcionAprobada->setAprobado(true);
 }
 
-
-
 void Curso::cursosHabilitadosParaEstudiante(string nickname, list<DTCurso>& cursosHabiltados) { 
     if(this->habilitado) {
         bool noEstaEst = true;
@@ -225,7 +223,6 @@ void Curso::cursosHabilitadosParaEstudiante(string nickname, list<DTCurso>& curs
     }
 } 
 
-
 Curso::~Curso(){
     //elimino las lecciones
 
@@ -250,5 +247,4 @@ Curso::~Curso(){
     this->idioma->borrarCurso(this);
     this->profesor->borrarCurso(this);
     //borrar el curso
-} 
-
+}

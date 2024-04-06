@@ -14,7 +14,6 @@ class ControladorUsuario: public IUsuario{
     private:
     ControladorUsuario();
     static ControladorUsuario* instancia;
-
     map<string, Estudiante *> estudiantes;
     map<string, Profesor *> profesores;
     Usuario * u;
@@ -23,10 +22,8 @@ class ControladorUsuario: public IUsuario{
     public:
         static ControladorUsuario* getInstancia();
         static void releaseInstancia();
-
         map<string, Estudiante*> getEstudiantes();
         map<string, Profesor*> getProfesores();
-
         DTUsuario* consultarUsuario(string nickname);
         list<DTProfesor*> listarProfesores();
         list<DTEstudiante*> listarEstudiantes();
@@ -48,7 +45,6 @@ class ControladorUsuario: public IUsuario{
         list<DTIdioma> listarIdiomasProfesor(string nickname);
         bool verificarExistenciaDeUsuario(string nickname);
         void desuscribirseDeIdioma(string idioma);
-
         void liberarUsuario();
 };
 

@@ -7,8 +7,7 @@
 using namespace std;
 
 class factory
-{//
-
+{
 private:
     factory();
     static factory *instancia;

@@ -2,20 +2,17 @@
 #define _CONTROLADORCURSO_H
 
 #include "ICurso.h"
-//#include "DTEstadisticaCurso.h"
 #include <iostream>
 #include "DTCurso.h"
 #include <map>
 #include <set>
 #include <list>
-
 using namespace std;
 
 class ControladorCurso: public ICurso{
 	private:
 		ControladorCurso();
 		static ControladorCurso* instancia; //Singleton
-
 		map<string, Curso*> cursos;
 		map<string, Idioma*> idiomas;
 		Leccion* leccionActual;
@@ -27,10 +24,8 @@ class ControladorCurso: public ICurso{
 	public:
 		static ControladorCurso* getInstancia();
     	static void releaseInstancia();
-
 		map<string, Curso*> getCursos();
 		map<string, Idioma*> getIdiomas();
-
 		string getNombreCurso();
 		list<DTCurso> listarCursos();
 		list<DTIdioma> listarIdiomas();

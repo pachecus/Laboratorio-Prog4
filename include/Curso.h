@@ -12,10 +12,7 @@
 #include "TipoDificultad.h"
 #include "DTEstadisticaCurso.h"
 #include "DTParEstudianteCurso.h"
-
-
 using namespace std;
-
 
 class Profesor;
 class Inscripcion;

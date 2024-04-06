@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include "Ejercicio.h"
-//#include "Inscripcion.h"
 using namespace std;
 
 class EjercicioTraduccion : public Ejercicio {

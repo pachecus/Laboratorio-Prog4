@@ -1,5 +1,6 @@
 #ifndef _DTPARESTUDIANTECURSO_H
 #define _DTPARESTUDIANTECURSO_H
+
 #include <iostream>
 #include "DTInscripcion.h"
 using namespace std;

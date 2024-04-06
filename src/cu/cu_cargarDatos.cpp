@@ -29,7 +29,6 @@ void cu_cargarDatos() {
     DTEstudiante U1("jpidiom", "asdfg123", "Juan Perez", "Soy un apasionado del aprendizaje de idiomas.", notif1, "Argentina", fecha1);
     estIngresado = iusuario->registrarEstudiante(U1);
     
-    
     DTFecha fecha2(28,02,1998);
     list<DTNotificacion> notif2;
     DTEstudiante U2("marsilva", "qwer456", "Maria Silva", "Como amante de los idiomas disfruto explorando nuevas formas de interactuar.", notif2, "Ecuador", fecha2);
@@ -83,8 +82,6 @@ void cu_cargarDatos() {
     estIngresado = icurso->registrarIdioma(I2);
     estIngresado = icurso->registrarIdioma(I3);
 
-    
-
     list<string> idpf11;
     idpf11.push_back(I1.getNombre());
     idpf11.push_back(I3.getNombre());
@@ -92,7 +89,6 @@ void cu_cargarDatos() {
     DTProfesor U11("langMaster", "P4s512", "Marta Grecia", "Soy una profesora apasionada por los idiomas.", notif11, "Instituto de Idiomas Moderno", idpf11);
     estIngresado = iusuario->registrarProfesor(U11);
     
-
     list<string> idpf12;
     idpf12.push_back(I1.getNombre());
     idpf12.push_back(I2.getNombre());
@@ -101,20 +97,17 @@ void cu_cargarDatos() {
     DTProfesor U12("linguaPro", "Pess23", "Carlos Petro", "Mi objetivo es inspirar a mis estudiantes a explorar nuevas culturas e idiomas", notif12, "Centro Global", idpf12);
     estIngresado = iusuario->registrarProfesor(U12);
 
-
     list<string> idpf13;
     idpf13.push_back(I2.getNombre());
     list<DTNotificacion> notif13;
     DTProfesor U13("talkExpert", "Secret1", "Laura Perez", "Soy una profesora entusiasta del aprendizaje de idiomas", notif13, "Instituto de Idiomas Vanguardia", idpf13);
     estIngresado = iusuario->registrarProfesor(U13);
 
-
     list<string> idpf14;
     idpf14.push_back(I3.getNombre());
     list<DTNotificacion> notif14;
     DTProfesor U14("lingoSensei", "Secure2", "Franco Lopez", "Apasionada en guiar a mis estudiantes en su viaje por nuevos horizontes idiomaticos", notif14, "Centro de Idiomas", idpf14);
     estIngresado = iusuario->registrarProfesor(U14);
-
 
     list<string> idpf15;
     idpf15.push_back(I1.getNombre());
@@ -284,8 +277,6 @@ void cu_cargarDatos() {
     
     N5->setEjercicioAprobado(E4);
     E4->setInscripcion(N5);
-
-
 
     cout << "\n ---- Los datos se han cargado correctamente ----\n\n";
 }

@@ -11,7 +11,6 @@
 #include "DTParEstudianteCurso.h"
 #include "TipoDificultad.h"
 #include <vector>
-
 using namespace std;
 
 class DTProfesor;

@@ -12,9 +12,7 @@
 #include "EjercicioCompletar.h"
 #include "EjercicioTraduccion.h"
 #include "DTLeccion.h"
-
 using namespace std;
-
 
 class Leccion {
 	private:
@@ -37,7 +35,6 @@ class Leccion {
 		void setObjetivo(string);
 		void setEjercicio(Ejercicio*);
 		//Otras operaciones
-		//DTCurso getDataCurso();
 		DTLeccion getDataLeccion();
 		void agregarEjercicioTraducir(string, string, string);
 		void agregarEjercicioCompletar(string, string, string);

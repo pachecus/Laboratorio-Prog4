@@ -11,7 +11,6 @@
 #include "DTInscripcion.h"
 #include "DTEstudiante.h"
 #include "DTFecha.h"
-
 using namespace std;
 
 class Estudiante: public Usuario {

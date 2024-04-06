@@ -14,7 +14,6 @@
 #include "Leccion.h"
 #include "Curso.h"
 #include "Ejercicio.h"
-
 using namespace std;
 
 class ICurso {

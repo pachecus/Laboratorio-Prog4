@@ -36,21 +36,17 @@ ControladorCurso* ControladorCurso::getInstancia() {
     return instancia;
 }
  
- 
 map<string, Curso*> ControladorCurso::getCursos(){
     return this->cursos;
 }
- 
   
 map<string, Idioma*> ControladorCurso::getIdiomas(){
     return this->idiomas;
 } 
 
- 
 string ControladorCurso::getNombreCurso() {
     return this->curso->getNombre();
 }
-
 
 list<DTCurso> ControladorCurso::listarCursos() {
     list<DTCurso> cursosDelSistema;
@@ -64,7 +60,6 @@ list<DTCurso> ControladorCurso::listarCursos() {
     return cursosDelSistema;
 }
  
-
 list<DTIdioma> ControladorCurso::listarIdiomas() {
     list<DTIdioma> res;
     map<string, Idioma*> idiomas = this->getIdiomas();
@@ -74,7 +69,6 @@ list<DTIdioma> ControladorCurso::listarIdiomas() {
     }
     return res;
 }
-
 
 Inscripcion* ControladorCurso::getInscripcion(){
     return this->inscripcionAsociadaACurso;
@@ -109,7 +103,6 @@ void ControladorCurso::guardarInscripcion(Inscripcion* ins) {
 void ControladorCurso::guardarLeccion(Leccion* l) {
     this->leccionActual = l;
 }
-
 
 void ControladorCurso::guardarCurso(Curso* c) {
     this->curso = c;
@@ -162,7 +155,6 @@ bool ControladorCurso::realizarEjercicioTraduccion(int idEj, string fraseTraducc
     return respuesta;
 }
 
-
 void ControladorCurso::desuscribirseAIdioma(string idioma, IObserver* o) {
     Idioma* i = this->idiomas.find(idioma)->second;
     i->eliminarSuscripciones(o);
@@ -201,9 +193,9 @@ list<DTCurso> ControladorCurso::listarCursosNoHabilitados(){
     }
     if(habilitable){
         cHab->setHabilitado(true);
-        return true;//se pudo habilitar
+        return true; //se pudo habilitar
     }else{
-        return false;//habia alguna leccion que no tiene ejercicios
+        return false; //habia alguna leccion que no tiene ejercicios
     }
 } 
 
@@ -235,7 +227,7 @@ list<DTIdioma> ControladorCurso::getIdiomasSuscrito(IObserver * u){
 }
 
 void ControladorCurso::crearSuscripcionAIdioma(string idioma, IObserver* u){
-        Idioma * i = this->idiomas.find(idioma)->second;//Asumo que el idioma "idioma" existe
+        Idioma * i = this->idiomas.find(idioma)->second; //Asumo que el idioma "idioma" existe
         i->suscribirse(u);  
 }
 
